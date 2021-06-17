@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Grid, GridItem } from "@chakra-ui/react";
 import { AiOutlineFolder } from "react-icons/ai";
-import { BiChevronDown } from "react-icons";
+import { BiChevronDown } from "react-icons/bi";
 
 export const Variants = () => (
   <Grid>
