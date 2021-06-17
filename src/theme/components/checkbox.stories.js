@@ -23,7 +23,7 @@ export const WithText = () => (
 )
 
 const CheckboxStory = {
-  title: "Atom/Checkbox",
+  title: "Form/Atom/Checkbox",
   component: Checkbox
 }
 

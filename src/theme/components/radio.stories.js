@@ -21,7 +21,7 @@ export const WithText = () => (
 )
 
 const RadioStory = {
-  title: "Atom/Radio",
+  title: "Form/Atom/Radio",
   component: Radio
 }
 

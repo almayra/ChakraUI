@@ -8,15 +8,12 @@ import {
   FormLabel,
   FormErrorMessage,
   FormHelperText, 
-  HStack,
-  RadioGroup,
-  Radio,
-  Select,
   NumberInput,
   NumberInputField,
   NumberInputStepper,
   NumberIncrementStepper,
-  NumberDecrementStepper
+  NumberDecrementStepper,
+  Textarea
 } from "@chakra-ui/react";
 import { AiOutlineFolder } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
@@ -66,28 +63,9 @@ export const Types = () => (
       <Input type="email" placeholder="Enter your email" />
       <FormHelperText>We'll never share your email.</FormHelperText>
     </FormControl>
-    <FormControl as="fieldset">
-      <FormLabel as="legend">Favorite Naruto Character</FormLabel>
-      <RadioGroup defaultValue="Itachi">
-        <HStack spacing="24px">
-          <Radio value="Sasuke">Sasuke</Radio>
-          <Radio value="Nagato">Nagato</Radio>
-          <Radio value="Itachi">Itachi</Radio>
-          <Radio value="Sage of the six Paths">Sage of the six Paths</Radio>
-        </HStack>
-      </RadioGroup>
-      <FormHelperText>Select only if you're a fan.</FormHelperText>
-    </FormControl>
     <FormControl id="first-name" isRequired>
       <FormLabel>First name</FormLabel>
       <Input placeholder="First name" />
-    </FormControl>
-    <FormControl id="country">
-      <FormLabel>Country</FormLabel>
-      <Select placeholder="Select country">
-        <option>United Arab Emirates</option>
-        <option>Nigeria</option>
-      </Select>
     </FormControl>
     <FormControl id="amount">
       <FormLabel>Amount</FormLabel>
@@ -99,11 +77,12 @@ export const Types = () => (
         </NumberInputStepper>
       </NumberInput>
     </FormControl>
+    <Textarea placeholder="Here is a sample placeholder" />
   </VStack>
 )
 
 const InputStory = {
-  title: "Molecule/Form",
+  title: "Form/Molecule/Input Field",
   component: Input
 }
 

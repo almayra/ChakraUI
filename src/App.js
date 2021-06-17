@@ -1,29 +1,40 @@
 import './App.css';
-import { 
-  Input, 
-  VStack, 
-  FormControl,
-  FormErrorMessage,
-  FormHelperText,   
-} from "@chakra-ui/react";
+import { IconButton, HStack } from "@chakra-ui/react"
+import { AiOutlineScan, AiOutlineArrowLeft } from "react-icons/ai";
+import { BiPlus } from "react-icons/bi";
+import { RiImageAddLine } from "react-icons/ri";
 
 function App() {
   return (
     <div className="App">
-      <VStack spacing={6}>
-        <FormControl>
-            <Input placeholder="Enter your email" variant="filled"/>
-          <FormHelperText>We'll never share your email.</FormHelperText>
-        </FormControl>
-        <FormControl isDisabled>
-            <Input placeholder="Enter your email" variant="filled"/>
-          <FormHelperText>We'll never share your email.</FormHelperText>
-        </FormControl>
-        <FormControl isInvalid>
-            <Input placeholder="Enter your email" variant="filled"/>
-          <FormErrorMessage>Your email is invalid.</FormErrorMessage>
-        </FormControl>
-      </VStack>
+    <HStack>
+      <IconButton
+        bgColor="primary.400"
+        size="lg"
+        icon={<AiOutlineScan size={20} color="white" />}
+        boxShadow="0 0 6px 1px #efdfde"
+        isRound
+      />
+      <IconButton
+        bgColor="primary.400"
+        size="md"
+        icon={<BiPlus size={16} color="white" />}
+        isRound
+      />
+      <IconButton
+        bgColor="primary.400"
+        size="md"
+        icon={<RiImageAddLine size={16} color="white" />}
+        isRound
+      />
+      <IconButton
+        bgColor="gray.75"
+        _hover="gray.100"
+        size="md"
+        icon={<AiOutlineArrowLeft size={16} color="white" />}
+        isRound
+      />
+    </HStack>
     </div>
   );
 }

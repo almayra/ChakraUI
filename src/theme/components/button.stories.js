@@ -1,5 +1,4 @@
-import React from "react";
-import { Button, Grid, GridItem } from "@chakra-ui/react";
+import { Button, Grid } from "@chakra-ui/react";
 import { AiOutlineFolder } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 
@@ -35,7 +34,7 @@ export const WithIcon = () => (
 )
 
 const ButtonStory = {
-  title: "Atom/Button",
+  title: "Form/Atom/Button",
   component: Button
 }
 
