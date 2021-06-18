@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactNode } from "react";
+import React, { CSSProperties, ReactNode,useState } from "react";
 import "./select.scss";
 import { BiChevronDown } from "react-icons/bi";
 import { BsChevronExpand } from "react-icons/bs";
@@ -10,17 +10,28 @@ interface ISelect extends React.HTMLAttributes<HTMLSelectElement> {
   append?: boolean;
   className?: string;
   style?: CSSProperties;
+  disabled?: boolean;
 }
 
-export const Select = ({children, placeholder, prepend, append, className, style}: ISelect) => {
+export const Select = ({children, placeholder, prepend, append, className, style, disabled}: ISelect) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <ul className="dropdown">
-      <li>
-        <div className={`select ${className}`} style={style}>
+      <li className={`${isOpen ? "focus" : ""}`}>
+        <button
+        className={`select ${className} ${disabled ? "disabled" : null}`} 
+        style={style}
+        onClick={toggleDropdown}
+        >
           {prepend ? <BsChevronExpand className="prepend"/> : null}
           {placeholder}
           {append ? <BiChevronDown className="append"/> : null}
-        </div>
+        </button>
         <ul>
           {children}
         </ul>

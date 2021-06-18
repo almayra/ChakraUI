@@ -26,6 +26,12 @@
     right: 8px;
     position: absolute;
   }
+
+  &.disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
 
 .dropdown li{
@@ -59,15 +65,20 @@
 }
 
 .dropdown ul ul {
+  cursor: pointer;
   left: 100%;
   position: absolute;
   top: 0;
 }
 
-.dropdown li:hover{
+.dropdown li.focus > ul {
+  display: block;
+}
+
+.dropdown li li:hover{
   background-color: #FAFAFA;
 }
 
-.dropdown li:hover > ul {
+.dropdown li li:hover > ul {
   display: block;
 }
