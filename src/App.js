@@ -1,40 +1,23 @@
 import './App.css';
-import { IconButton, HStack } from "@chakra-ui/react"
-import { AiOutlineScan, AiOutlineArrowLeft } from "react-icons/ai";
-import { BiPlus } from "react-icons/bi";
-import { RiImageAddLine } from "react-icons/ri";
+import { Select, Menu, SubMenu } from "./theme/components/select/index";
 
 function App() {
   return (
     <div className="App">
-    <HStack>
-      <IconButton
-        bgColor="primary.400"
-        size="lg"
-        icon={<AiOutlineScan size={20} color="white" />}
-        boxShadow="0 0 6px 1px #efdfde"
-        isRound
-      />
-      <IconButton
-        bgColor="primary.400"
-        size="md"
-        icon={<BiPlus size={16} color="white" />}
-        isRound
-      />
-      <IconButton
-        bgColor="primary.400"
-        size="md"
-        icon={<RiImageAddLine size={16} color="white" />}
-        isRound
-      />
-      <IconButton
-        bgColor="gray.75"
-        _hover="gray.100"
-        size="md"
-        icon={<AiOutlineArrowLeft size={16} color="white" />}
-        isRound
-      />
-    </HStack>
+      <Select placeholder="Select Option" append prepend>
+        <Menu menuLabel="Bank" append>
+          <SubMenu>Bank BCA</SubMenu>
+          <SubMenu>Bank BCA</SubMenu>
+          <SubMenu>Bank BCA</SubMenu>
+          <SubMenu>Bank BCA</SubMenu>
+        </Menu>
+        <Menu menuLabel="Perusahaan" append>
+          <SubMenu>Bank BCA</SubMenu>
+          <SubMenu>Bank BCA</SubMenu>
+          <SubMenu>Bank BCA</SubMenu>
+          <SubMenu>Bank BCA</SubMenu>
+        </Menu>
+      </Select>
     </div>
   );
 }
