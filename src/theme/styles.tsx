@@ -2,6 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 import { ButtonStyles as Button } from "./components/button";
 import { InputStyles as Input } from "./components/input";
 import { SelectStyles as Select } from "./components/select";
+import Table from "./components/table";
 
 export const theme = extendTheme({
   colors:{
@@ -76,6 +77,118 @@ export const theme = extendTheme({
     body: "Noto Sans, sans-serif",
     heading: "Poppins, sans-serif"
   },
+  textStyles: {
+    size10reg: {
+      fontSize: 10,
+      fontWeight: "regular",
+      lineHeight: "12",
+    },
+    size10bold: {
+      fontSize: 10,
+      fontWeight: "bold",
+      lineHeight: "12",
+    },
+    size12reg: {
+      fontSize: 12,
+      fontWeight: "regular",
+      lineHeight: "16",
+    },
+    size12bold: {
+      fontSize: 12,
+      fontWeight: "bold",
+      lineHeight: "16",
+    },
+    h1: {
+      fontSize: 13,
+      fontWeight: "regular",
+      lineHeight: "16",
+    },
+    h2: {
+      fontSize: 13,
+      fontWeight: "bold",
+      lineHeight: "16",
+    },
+    size14reg: {
+      fontSize: 14,
+      fontWeight: "regular",
+      lineHeight: "20",
+    },
+    size14bold: {
+      fontSize: 14,
+      fontWeight: "bold",
+      lineHeight: "20",
+    },
+    size16reg: {
+      fontSize: 16,
+      fontWeight: "regular",
+      lineHeight: "24",
+    },
+    size16bold: {
+      fontSize: 16,
+      fontWeight: "bold",
+      lineHeight: "24",
+    },
+    size18reg: {
+      fontSize: 18,
+      fontWeight: "regular",
+      lineHeight: "24",
+    },
+    size18bold: {
+      fontSize: 18,
+      fontWeight: "bold",
+      lineHeight: "24",
+    },
+    size20reg: {
+      fontSize: 20,
+      fontWeight: "regular",
+      lineHeight: "28",
+    },
+    size20bold: {
+      fontSize: 20,
+      fontWeight: "bold",
+      lineHeight: "28",
+    },
+    size24reg: {
+      fontSize: 24,
+      fontWeight: "regular",
+      lineHeight: "24",
+    },
+    size24bold: {
+      fontSize: 24,
+      fontWeight: "bold",
+      lineHeight: "24",
+    },
+    size28reg: {
+      fontSize: 28,
+      fontWeight: "regular",
+      lineHeight: "28",
+    },
+    size28bold: {
+      fontSize: 28,
+      fontWeight: "bold",
+      lineHeight: "28",
+    },
+    size32reg: {
+      fontSize: 32,
+      fontWeight: "regular",
+      lineHeight: "32",
+    },
+    size32bold: {
+      fontSize: 32,
+      fontWeight: "bold",
+      lineHeight: "32",
+    },
+    size42reg: {
+      fontSize: 42,
+      fontWeight: "regular",
+      lineHeight: "42",
+    },
+    size42bold: {
+      fontSize: 42,
+      fontWeight: "bold",
+      lineHeight: "42",
+    },
+  },
   fontSizes: {
     10: "0.625rem",
     12: "0.75rem",
@@ -92,7 +205,8 @@ export const theme = extendTheme({
   components: {
     Button,
     Input,
-    Select
+    Select,
+    Table
   }
 })
 

@@ -1,36 +1,36 @@
-import { Button, Grid } from "@chakra-ui/react";
+import { Button, VStack } from "@chakra-ui/react";
 import { AiOutlineFolder } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 
 export const Variants = () => (
-  <Grid>
-    <Button variant="solid" colorScheme="primary">Solid</Button>
-    <Button variant="outline" colorScheme="primary">Outline</Button>
+  <VStack>
+    <Button variant="solid">Solid</Button>
+    <Button variant="outline">Outline</Button>
     <Button variant="ghost">Ghost</Button>
-  </Grid>
+  </VStack>
 )
 
 export const Size = () => (
-  <Grid>
-    <Button colorScheme="primary" size="sm">Small</Button>
-    <Button colorScheme="primary" size="md">Medium</Button>
-    <Button colorScheme="primary" size="lg">Large</Button>
-  </Grid>
+  <VStack>
+    <Button size="sm">Small</Button>
+    <Button size="md">Medium</Button>
+    <Button size="lg">Large</Button>
+  </VStack>
 )
 
 export const Disable = () => (
-  <Grid>
-    <Button colorScheme="primary">Rest</Button>
-    <Button colorScheme="primary" disabled>Rest</Button>
-  </Grid>
+  <VStack>
+    <Button>Rest</Button>
+    <Button disabled>Rest</Button>
+  </VStack>
 )
 
 export const WithIcon = () => (
-  <Grid>
+  <VStack>
     <Button leftIcon={<AiOutlineFolder/>}>Prepend</Button>
     <Button rightIcon={<BiChevronDown/>}>Append</Button>
     <Button leftIcon={<AiOutlineFolder/>} rightIcon={<BiChevronDown/>}>Both</Button>
-  </Grid>
+  </VStack>
 )
 
 const ButtonStory = {

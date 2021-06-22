@@ -53,3 +53,10 @@ export const state = () => (
     </Select>
   </HStack>
 )
+
+const SelectStory = {
+  title: "Form/Atom/Select",
+  component: Select
+}
+
+export default SelectStory

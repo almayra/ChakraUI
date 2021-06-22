@@ -1,41 +1,12 @@
 import './App.css';
-import { Select, Menu, SubMenu } from "./theme/components/select/index";
-import { HStack } from "@chakra-ui/react";
+import { VStack, Badge } from "@chakra-ui/react";
+import { BiImageAdd } from "react-icons/bi";
 
 function App() {
   return (
-    <div className="App">
-      <HStack spacing={6}>
-        <Select disabled placeholder="Select Option" append prepend>
-          <Menu menuLabel="Bank" append>
-            <SubMenu>Bank BCA</SubMenu>
-            <SubMenu>Bank BNI</SubMenu>
-            <SubMenu>Bank BRI</SubMenu>
-            <SubMenu>Bank Maybank</SubMenu>
-          </Menu>
-          <Menu menuLabel="Perusahaan" append>
-            <SubMenu>PT Agricon</SubMenu>
-            <SubMenu>PT Agri Hari Ini</SubMenu>
-            <SubMenu>PT Harapan Anak Bangsa</SubMenu>
-            <SubMenu>PT FanAttics</SubMenu>
-          </Menu>
-        </Select>
-        <Select placeholder="Select Option" append prepend>
-          <Menu menuLabel="Bank" append>
-            <SubMenu>Bank BCA</SubMenu>
-            <SubMenu>Bank BNI</SubMenu>
-            <SubMenu>Bank BRI</SubMenu>
-            <SubMenu>Bank Maybank</SubMenu>
-          </Menu>
-          <Menu menuLabel="Perusahaan" append>
-            <SubMenu>PT Agricon</SubMenu>
-            <SubMenu>PT Agri Hari Ini</SubMenu>
-            <SubMenu>PT Harapan Anak Bangsa</SubMenu>
-            <SubMenu>PT FanAttics</SubMenu>
-          </Menu>
-        </Select>
-      </HStack>
-    </div>
+    <VStack>
+      <Badge colorScheme="red" padding="8px" borderRadius="4px" border="1px" borderColor="#FF7875">Default</Badge>
+    </VStack>
   );
 }
 
